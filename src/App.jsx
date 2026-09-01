@@ -212,7 +212,7 @@ export default function App(){
         })
         // async load frames in background - first frame instantly, then rest
         ;(async()=>{
-          const first = await tryLoad(`/frames/frame_0001.png`) || await tryLoad(`/frames/frame_0001.jpg`)
+          const first = await tryLoad(`frames/frame_0001.png`) || await tryLoad(`frames/frame_0001.jpg`)
           if(first){
             imgs.push(first)
             framesRef.current=imgs
@@ -223,8 +223,8 @@ export default function App(){
             draw(0)
             // load rest in background without blocking scrub
             for(let i=2;i<=frameCount;i++){
-              const n=`/frames/frame_${String(i).padStart(4,'0')}.jpg`
-              const f=`/frames/frame_${String(i).padStart(4,'0')}.png`
+              const n=`frames/frame_${String(i).padStart(4,'0')}.jpg`
+              const f=`frames/frame_${String(i).padStart(4,'0')}.png`
               let img = await tryLoad(n)
               if(!img) img = await tryLoad(f)
               if(img) imgs.push(img)
