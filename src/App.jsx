@@ -330,7 +330,7 @@ export default function App(){
           preload="auto"
           poster="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=1200&q=80"
           style={{position:"absolute", inset:0, width:"100%", height:"100%", objectFit:"cover", filter:"brightness(0.68) saturate(1.12)", display:"none"}}
-          src="https://videos.pexels.com/video-files/856309/856309-hd_1920_1080_30fps.mp4"
+          src=""
         />
         <div style={{position:"absolute", inset:0, background:"linear-gradient(180deg, rgba(0,0,0,0.22) 0%, rgba(0,0,0,0.08) 32%, rgba(0,0,0,0.58) 100%)"}}/>
         <div className="blob-a" style={{position:"absolute", width:520, height:520, background:"radial-gradient(circle at 30% 30%, rgba(255,214,217,0.35) 0%, transparent 62%)", borderRadius:"50%", left:-80, top:80, opacity:0.8, mixBlendMode:"screen"}}/>
@@ -354,11 +354,7 @@ export default function App(){
         <div style={{position:"absolute", bottom:18, left:"50%", transform:"translateX(-50%)", color:"rgba(255,255,255,0.92)", fontSize:11, letterSpacing:"0.14em", fontWeight:700, display:"flex", gap:8, alignItems:"center", background:"rgba(0,0,0,0.32)", backdropFilter:"blur(8px)", padding:"7px 14px", borderRadius:999, border:"1px solid rgba(255,255,255,0.18)"}}>
           <span>↕</span> SCROLL SLOWLY — YOUR FRAMES BLOOM <span>↕</span>
         </div>
-        {!frameMode && (
-          <div style={{position:"absolute", top:62, left:"50%", transform:"translateX(-50%)", background:"rgba(0,0,0,0.52)", color:"#fff", padding:"6px 12px", borderRadius:999, fontSize:10, fontWeight:600, border:"1px solid rgba(255,255,255,0.18)"}}>
-            No frames — using video fallback. Add <span style={{background:"#fff", color:"#000", padding:"1px 6px", borderRadius:4}}>frame_*.png</span> to /public/frames/
-          </div>
-        )}
+
       </section>
       {/* spacer drives fixed hero scrub - no pin glitch */}
       <div ref={heroTriggerRef} style={{height:"260vh", pointerEvents:"none"}} aria-hidden="true" />
